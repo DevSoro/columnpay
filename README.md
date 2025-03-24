@@ -1,55 +1,55 @@
-# ColumnPay - 모던 결제 솔루션
+# ColumnPay - Modern Payment Solution
 
-ColumnPay는 기업을 위한 현대적이고 직관적인 결제 관리 솔루션입니다. 빠르고 안전한 결제 처리와 강력한 분석 도구를 제공하여 비즈니스의 성장을 돕습니다.
+ColumnPay is a modern and intuitive payment management solution for businesses. It helps business growth by providing fast and secure payment processing with powerful analytical tools.
 
-## 주요 기능
+## Key Features
 
-- 📊 **실시간 대시보드**: 결제 상태와 수익을 한눈에 파악
-- 💳 **다양한 결제 수단**: 신용카드, 이체, 가상화폐 등 지원
-- 📱 **반응형 디자인**: 모든 기기에서 완벽하게 작동
-- 🔒 **강력한 보안**: 엔드투엔드 암호화와 보안 표준 준수
-- ⚡ **빠른 처리 속도**: 최적화된 결제 처리 과정
+- 📊 **Real-time Dashboard**: Monitor payment status and revenue at a glance
+- 💳 **Multiple Payment Methods**: Support for credit cards, transfers, cryptocurrencies, and more
+- 📱 **Responsive Design**: Works perfectly on all devices
+- 🔒 **Strong Security**: End-to-end encryption and compliance with security standards
+- ⚡ **Fast Processing**: Optimized payment processing workflow
 
-## 설치 방법
+## Installation
 
-### 필수 조건
+### Prerequisites
 
-- Node.js 20.0.0 이상
-- npm 10.0.0 이상 또는 yarn 1.22.0 이상
+- Node.js 20.0.0 or higher
+- npm 10.0.0 or higher or yarn 1.22.0 or higher
 
-### 설치 단계
+### Installation Steps
 
-1. 저장소 복제:
+1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/columnpay.git
    cd columnpay
    ```
 
-2. 의존성 설치:
+2. Install dependencies:
    ```bash
    npm install
-   # 또는
+   # or
    yarn install
    ```
 
-3. 환경 변수 설정:
+3. Set up environment variables:
    ```bash
    cp .env.example .env.local
-   # .env.local 파일을 편집하여 필요한 API 키와 환경 변수를 설정하세요
+   # Edit the .env.local file to set up the necessary API keys and environment variables
    ```
 
-4. 개발 서버 실행:
+4. Run the development server:
    ```bash
    npm run dev
-   # 또는
+   # or
    yarn dev
    ```
 
-5. 브라우저에서 `http://localhost:3000`으로 접속하여 애플리케이션을 확인하세요.
+5. Visit `http://localhost:3000` in your browser to check the application.
 
-## 사용 방법
+## Usage
 
-### 로그인 및 대시보드 접근
+### Login and Dashboard Access
 
 ```jsx
 import { useAuth } from '@/hooks/useAuth';
@@ -59,16 +59,16 @@ function Login() {
   
   const handleLogin = async (credentials) => {
     await login(credentials);
-    // 로그인 성공 후 대시보드로 리다이렉트
+    // Redirect to dashboard after successful login
   };
   
   return (
-    // 로그인 폼 렌더링
+    // Render login form
   );
 }
 ```
 
-### 결제 처리 예제
+### Payment Processing Example
 
 ```jsx
 import { processPayment } from '@/lib/payment';
@@ -83,50 +83,50 @@ async function handlePayment(paymentData) {
 }
 ```
 
-## 프로젝트 스크린샷
+## Project Screenshots
 
-![대시보드](https://example.com/dashboard.png)
-![결제 처리](https://example.com/payment.png)
-![분석 화면](https://example.com/analytics.png)
+![Dashboard](https://example.com/dashboard.png)
+![Payment Processing](https://example.com/payment.png)
+![Analytics Screen](https://example.com/analytics.png)
 
-## 폴더 구조
+## Folder Structure
 
 ```
 columnpay/
-├── .next/               # Next.js 빌드 출력
-├── node_modules/        # 프로젝트 의존성
-├── public/              # 정적 자산 (이미지, 아이콘 등)
+├── .next/               # Next.js build output
+├── node_modules/        # Project dependencies
+├── public/              # Static assets (images, icons, etc.)
 ├── src/
-│   ├── app/             # Next.js 앱 라우터
-│   │   ├── page.tsx     # 메인 랜딩 페이지
-│   │   ├── layout.tsx   # 앱 레이아웃
-│   │   └── globals.css  # 전역 스타일
-│   ├── components/      # 재사용 가능한 컴포넌트
-│   │   └── ui/          # UI 컴포넌트 (버튼, 카드 등)
-│   ├── hooks/           # 커스텀 React 훅
-│   └── lib/             # 유틸리티 함수 및 서비스
-├── .env.example         # 환경 변수 예제
-├── .gitignore           # Git 무시 파일 목록
-├── package.json         # 프로젝트 메타데이터 및 의존성
-├── tailwind.config.ts   # Tailwind CSS 구성
-└── tsconfig.json        # TypeScript 구성
+│   ├── app/             # Next.js app router
+│   │   ├── page.tsx     # Main landing page
+│   │   ├── layout.tsx   # App layout
+│   │   └── globals.css  # Global styles
+│   ├── components/      # Reusable components
+│   │   └── ui/          # UI components (buttons, cards, etc.)
+│   ├── hooks/           # Custom React hooks
+│   └── lib/             # Utility functions and services
+├── .env.example         # Environment variables example
+├── .gitignore           # Git ignore file list
+├── package.json         # Project metadata and dependencies
+├── tailwind.config.ts   # Tailwind CSS configuration
+└── tsconfig.json        # TypeScript configuration
 ```
 
-## 기여 방법
+## How to Contribute
 
-1. 이 저장소를 포크합니다.
-2. 새로운 브랜치를 생성합니다 (`git checkout -b feature/amazing-feature`).
-3. 변경사항을 커밋합니다 (`git commit -m 'Add some amazing feature'`).
-4. 브랜치를 푸시합니다 (`git push origin feature/amazing-feature`).
-5. Pull Request를 생성합니다.
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature/amazing-feature`).
+3. Commit your changes (`git commit -m 'Add some amazing feature'`).
+4. Push the branch (`git push origin feature/amazing-feature`).
+5. Create a Pull Request.
 
-## 라이선스
+## License
 
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
+This project is distributed under the MIT license. For more details, see the `LICENSE` file.
 
-## 참고 링크
+## Reference Links
 
-- [Next.js 문서](https://nextjs.org/docs)
-- [Tailwind CSS 문서](https://tailwindcss.com/docs)
-- [Framer Motion 문서](https://www.framer.com/motion/)
-- [Radix UI 문서](https://www.radix-ui.com/docs/primitives/overview/introduction)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Framer Motion Documentation](https://www.framer.com/motion/)
+- [Radix UI Documentation](https://www.radix-ui.com/docs/primitives/overview/introduction)

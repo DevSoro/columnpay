@@ -719,7 +719,7 @@ export default function Home() {
                 }}
                 transition={{ duration: 0.2 }}
               >
-                💻 관리자 대시보드
+                💻 관리자 대시보드 1
               </motion.span>
               <motion.span
                 className="inline-block px-5 py-3 bg-gray-800/70 backdrop-blur-sm rounded-lg border border-gray-700/50 text-base text-gray-300"
